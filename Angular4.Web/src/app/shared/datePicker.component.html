@@ -1,0 +1,5 @@
+<input type="text" *ngIf="!showDatePicker" name="{{name}}" class="form-control" placeholder="{{ placeholder | translate }}" [(ngModel)]="formattedCurrentDate"
+(click)="ShowDatePicker()" />
+<div style="display: inline-block;" *ngIf="showDatePicker">
+<datepicker name="emissionDate" [(ngModel)]="currentDate" [showWeeks]="false" (click)="HideDatePicker()"></datepicker>
+</div>
