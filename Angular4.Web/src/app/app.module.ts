@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -10,9 +12,12 @@ import { CoreModule } from './core/core.module';
   ],
   imports: [
     BrowserModule,
+    TranslateModule.forRoot(),
     CoreModule.forRoot(),
   ],
-  providers: [],
+  exports: [
+    RouterModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
