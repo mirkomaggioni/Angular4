@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders, Optional, SkipSelf } from '@angular/core
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { ModalModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { ModalModule, DatepickerModule } from 'ngx-bootstrap';
 
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/observable/forkJoin';
