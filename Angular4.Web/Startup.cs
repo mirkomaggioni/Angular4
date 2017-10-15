@@ -1,9 +1,13 @@
-﻿using System.Reflection;
+using System;
+using System.IO;
+using System.Reflection;
 using System.Web.Http;
 using Angular4.Web.Controllers.Api;
 using Autofac;
 using Autofac.Integration.WebApi;
 using Microsoft.Owin;
+using Microsoft.Owin.FileSystems;
+using Microsoft.Owin.StaticFiles;
 using Newtonsoft.Json;
 using Owin;
 
@@ -38,7 +42,20 @@ namespace Angular4.Web
 
 			app.UseWebApi(config);
 
-			var serializerSettings = config.Formatters.JsonFormatter.SerializerSettings;
+		  string root = AppDomain.CurrentDomain.BaseDirectory;
+		  var physicalFileSystem = new PhysicalFileSystem(Path.Combine(root, "src"));
+
+		  var fileServerOptions = new FileServerOptions
+		  {
+		    RequestPath = PathString.Empty,
+		    EnableDefaultFiles = true,
+		    FileSystem = physicalFileSystem,
+		    EnableDirectoryBrowsing = false
+		  };
+
+		  app.UseFileServer(fileServerOptions);
+
+      var serializerSettings = config.Formatters.JsonFormatter.SerializerSettings;
 			serializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Local;
 		}
 	}
