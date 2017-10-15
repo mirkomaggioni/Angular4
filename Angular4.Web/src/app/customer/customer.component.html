@@ -1,0 +1,35 @@
+<div [hidden]="edit">
+    <input type="button" class="btn btn-primary" value="New" (click)="New()" />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    {{ "NAME" | translate }}
+                </th>
+                <th>
+                    {{ "ADDRESS" | translate }}
+                </th>
+                <th>
+                    {{ "CITY" | translate }}
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let customer of (customers | searchCustomers: searchService.searchText)" (click)="Edit(customer)">
+                <td>
+                    {{customer.Name}}
+                </td>
+                <td>
+                    {{customer.Address}}
+                </td>
+                <td>
+                    {{customer.City.Name}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-customer-detail *ngIf="customer" [hidden]="!edit" [customer]="customer" [isNew]="newCustomer" [validationEnabled]="customerValidationEnabled" 
+    (onClosed)="onClosed($event)" (onDeleted)="onDeleted($event)"></app-customer-detail>

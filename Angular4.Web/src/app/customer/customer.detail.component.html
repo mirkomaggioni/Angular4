@@ -1,0 +1,18 @@
+<form #customerForm="ngForm">
+    <div class="form">
+        <button type="submit" class="btn btn-primary" (click)="Save(customerForm)" [disabled]="!isValid(customerForm)">{{ "SAVE" | translate }}</button>
+        <button type="submit" class="btn btn-danger" (click)="Delete()" *ngIf="!isNew">{{ "DELETE" | translate }}</button>
+        <button type="submit" class="btn btn-default" (click)="Close()">{{ "CLOSE" | translate }}</button>
+
+        <div class="form-group">
+            <label for="name">{{ "NAME" | translate }}</label>
+            <input type="text" name="name" class="form-control" placeholder="{{ 'NAME' | translate }}" [(ngModel)]="customer.Name" [required]="validationEnabled" />
+        </div>
+        <div class="form-group">
+            <label for="address">{{ "ADDRESS" | translate }}</label>
+            <input type="text" name="address" class="form-control" placeholder="{{ 'ADDRESS' | translate }}" [(ngModel)]="customer.Address"
+                [required]="validationEnabled" />
+        </div>
+        <app-city [city]="customer.City" (onSelected)="onCitySelected($event)"></app-city>
+    </div>
+</form>
