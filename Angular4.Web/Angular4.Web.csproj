@@ -77,9 +77,6 @@
     <Reference Include="Microsoft.Owin.Hosting, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Hosting.2.0.2\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.StaticFiles, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.StaticFiles.3.1.0\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
-    </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
@@ -122,19 +119,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="karma.conf.js" />
-    <Content Include="protractor.conf.js" />
-    <Content Include="src\app\app.component.css" />
-    <Content Include="src\app\app.component.html" />
-    <Content Include="src\app\city\city.component.html" />
-    <Content Include="src\app\city\city.detail.component.html" />
-    <Content Include="src\app\customer\customer.component.html" />
-    <Content Include="src\app\customer\customer.detail.component.html" />
-    <Content Include="src\app\header.component.html" />
-    <Content Include="src\app\shared\datePicker.component.html" />
-    <Content Include="src\favicon.ico" />
-    <Content Include="src\index.html" />
-    <Content Include="src\styles.css" />
+    <Content Include="app\app.component.css" />
+    <Content Include="app\app.component.html" />
+    <Content Include="app\city\city.component.html" />
+    <Content Include="app\city\city.detail.component.html" />
+    <Content Include="app\customer\customer.component.html" />
+    <Content Include="app\customer\customer.detail.component.html" />
+    <Content Include="app\header.component.html" />
+    <Content Include="app\shared\datePicker.component.html" />
+    <Content Include="Content\styles.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="index.html" />
+    <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -148,14 +144,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".angular-cli.json" />
-    <Content Include=".editorconfig" />
     <Content Include=".gitignore" />
     <Content Include="package.json" />
     <None Include="packages.config" />
-    <Content Include="src\assets\.gitkeep" />
-    <Content Include="src\tsconfig.app.json" />
-    <Content Include="src\tsconfig.spec.json" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
@@ -173,36 +164,31 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\app\app.component.ts" />
-    <TypeScriptCompile Include="src\app\app.module.ts" />
-    <TypeScriptCompile Include="src\app\city\city.component.ts" />
-    <TypeScriptCompile Include="src\app\city\city.detail.component.ts" />
-    <TypeScriptCompile Include="src\app\city\city.model.ts" />
-    <TypeScriptCompile Include="src\app\city\city.module.ts" />
-    <TypeScriptCompile Include="src\app\city\city.service.ts" />
-    <TypeScriptCompile Include="src\app\city\cityName.pipe.ts" />
-    <TypeScriptCompile Include="src\app\city\district.model.ts" />
-    <TypeScriptCompile Include="src\app\city\district.service.ts" />
-    <TypeScriptCompile Include="src\app\core\alert.service.ts" />
-    <TypeScriptCompile Include="src\app\core\core.module.ts" />
-    <TypeScriptCompile Include="src\app\core\search.service.ts" />
-    <TypeScriptCompile Include="src\app\customer\customer.component.ts" />
-    <TypeScriptCompile Include="src\app\customer\customer.detail.component.ts" />
-    <TypeScriptCompile Include="src\app\customer\customer.model.ts" />
-    <TypeScriptCompile Include="src\app\customer\customer.module.ts" />
-    <TypeScriptCompile Include="src\app\customer\customer.service.ts" />
-    <TypeScriptCompile Include="src\app\customer\searchCustomers.pipe.ts" />
-    <TypeScriptCompile Include="src\app\header.component.ts" />
-    <TypeScriptCompile Include="src\app\shared\commons.ts" />
-    <TypeScriptCompile Include="src\app\shared\datePicker.component.ts" />
-    <TypeScriptCompile Include="src\app\shared\shared.module.ts" />
-    <TypeScriptCompile Include="src\app\shared\webapi.ts" />
-    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
-    <TypeScriptCompile Include="src\environments\environment.ts" />
-    <TypeScriptCompile Include="src\main.ts" />
-    <TypeScriptCompile Include="src\polyfills.ts" />
-    <TypeScriptCompile Include="src\test.ts" />
-    <TypeScriptCompile Include="src\typings.d.ts" />
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\city\city.component.ts" />
+    <TypeScriptCompile Include="app\city\city.detail.component.ts" />
+    <TypeScriptCompile Include="app\city\city.model.ts" />
+    <TypeScriptCompile Include="app\city\city.module.ts" />
+    <TypeScriptCompile Include="app\city\city.service.ts" />
+    <TypeScriptCompile Include="app\city\cityName.pipe.ts" />
+    <TypeScriptCompile Include="app\city\district.model.ts" />
+    <TypeScriptCompile Include="app\city\district.service.ts" />
+    <TypeScriptCompile Include="app\core\alert.service.ts" />
+    <TypeScriptCompile Include="app\core\core.module.ts" />
+    <TypeScriptCompile Include="app\core\search.service.ts" />
+    <TypeScriptCompile Include="app\customer\customer.component.ts" />
+    <TypeScriptCompile Include="app\customer\customer.detail.component.ts" />
+    <TypeScriptCompile Include="app\customer\customer.model.ts" />
+    <TypeScriptCompile Include="app\customer\customer.module.ts" />
+    <TypeScriptCompile Include="app\customer\customer.service.ts" />
+    <TypeScriptCompile Include="app\customer\searchCustomers.pipe.ts" />
+    <TypeScriptCompile Include="app\header.component.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\shared\commons.ts" />
+    <TypeScriptCompile Include="app\shared\datePicker.component.ts" />
+    <TypeScriptCompile Include="app\shared\shared.module.ts" />
+    <TypeScriptCompile Include="app\shared\webapi.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
