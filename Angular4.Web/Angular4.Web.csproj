@@ -121,11 +121,26 @@
   <ItemGroup>
     <Content Include="app\app.component.css" />
     <Content Include="app\app.component.html" />
+    <Content Include="app\attachment\attachment.component.html" />
+    <Content Include="app\attachment\attachment.component.js" />
+    <Content Include="app\attachment\attachment.model.js" />
+    <Content Include="app\attachment\attachment.module.js" />
+    <Content Include="app\attachment\attachment.service.js" />
+    <Content Include="app\attachment\fileBlob.model.js" />
+    <Content Include="app\attachment\fileBlob.service.js" />
     <Content Include="app\city\city.component.html" />
     <Content Include="app\city\city.detail.component.html" />
     <Content Include="app\customer\customer.component.html" />
     <Content Include="app\customer\customer.detail.component.html" />
     <Content Include="app\header.component.html" />
+    <Content Include="app\invoice\invoice.component.html" />
+    <Content Include="app\invoice\invoice.component.js" />
+    <Content Include="app\invoice\invoice.detail.component.html" />
+    <Content Include="app\invoice\invoice.detail.component.js" />
+    <Content Include="app\invoice\invoice.model.js" />
+    <Content Include="app\invoice\invoice.module.js" />
+    <Content Include="app\invoice\invoice.service.js" />
+    <Content Include="app\invoice\searchInvoices.pipe.js" />
     <Content Include="app\shared\datePicker.component.html" />
     <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
@@ -146,6 +161,18 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="package.json" />
+    <Content Include="app\attachment\attachment.component.js.map" />
+    <Content Include="app\attachment\attachment.model.js.map" />
+    <Content Include="app\attachment\attachment.module.js.map" />
+    <Content Include="app\attachment\attachment.service.js.map" />
+    <Content Include="app\attachment\fileBlob.model.js.map" />
+    <Content Include="app\attachment\fileBlob.service.js.map" />
+    <Content Include="app\invoice\invoice.component.js.map" />
+    <Content Include="app\invoice\invoice.detail.component.js.map" />
+    <Content Include="app\invoice\invoice.model.js.map" />
+    <Content Include="app\invoice\invoice.module.js.map" />
+    <Content Include="app\invoice\invoice.service.js.map" />
+    <Content Include="app\invoice\searchInvoices.pipe.js.map" />
     <None Include="packages.config" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
@@ -166,6 +193,12 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\attachment\attachment.component.ts" />
+    <TypeScriptCompile Include="app\attachment\attachment.model.ts" />
+    <TypeScriptCompile Include="app\attachment\attachment.module.ts" />
+    <TypeScriptCompile Include="app\attachment\attachment.service.ts" />
+    <TypeScriptCompile Include="app\attachment\fileBlob.model.ts" />
+    <TypeScriptCompile Include="app\attachment\fileBlob.service.ts" />
     <TypeScriptCompile Include="app\city\city.component.ts" />
     <TypeScriptCompile Include="app\city\city.detail.component.ts" />
     <TypeScriptCompile Include="app\city\city.model.ts" />
@@ -184,6 +217,12 @@
     <TypeScriptCompile Include="app\customer\customer.service.ts" />
     <TypeScriptCompile Include="app\customer\searchCustomers.pipe.ts" />
     <TypeScriptCompile Include="app\header.component.ts" />
+    <TypeScriptCompile Include="app\invoice\invoice.component.ts" />
+    <TypeScriptCompile Include="app\invoice\invoice.detail.component.ts" />
+    <TypeScriptCompile Include="app\invoice\invoice.model.ts" />
+    <TypeScriptCompile Include="app\invoice\invoice.module.ts" />
+    <TypeScriptCompile Include="app\invoice\invoice.service.ts" />
+    <TypeScriptCompile Include="app\invoice\searchInvoices.pipe.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\shared\commons.ts" />
     <TypeScriptCompile Include="app\shared\datePicker.component.ts" />
